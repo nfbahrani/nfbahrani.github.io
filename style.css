@@ -28,7 +28,7 @@
 }
 
 .profile-text .profile-icon {
-  width:6%; 
+  width:4%; 
   min-width: 35px;
   height:auto; 
   vertical-align: middle;
@@ -55,7 +55,7 @@
 }
 
 .social-links a {
-  margin-right: 12px;
+  margin-right: 10px;
 }
 
 .profile-summary { /* Width is 40% of the parent and locates on the right hand side*/
@@ -66,7 +66,7 @@
 }
 
 .profile_summary img{
-    /* /* width: 6px; */
+    /* max-width: 15%; */
     vertical-align: middle;
 }
 
