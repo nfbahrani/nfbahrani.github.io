@@ -10,7 +10,7 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fatemeh Bahrani</title>
+  <title>Publications &ndash; Fatemeh Bahrani</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,9 +20,11 @@
   <aside class="sidebar">
     <div class="sidebar-inner">
 
-      <img class="sidebar-photo" src="images/profile-image.jpg" alt="Fatemeh Bahrani">
+      <a href="index.html" tabindex="-1" aria-hidden="true">
+        <img class="sidebar-photo" src="images/profile-image.jpg" alt="Fatemeh Bahrani">
+      </a>
 
-      <p class="sidebar-name">Fatemeh Bahrani</p>
+      <p class="sidebar-name"><a href="index.html">Fatemeh Bahrani</a></p>
       <p class="sidebar-role">CS Researcher</p>
       <!-- <p class="sidebar-affil">University of Southern California</p> -->
 
@@ -67,18 +69,16 @@
       </div>
 
       <nav class="sidebar-nav">
-        <a href="#news">News</a>
-        <a href="#education">Education</a>
-        <a href="publications.html">Publications</a>
+        <a href="index.html#news">News</a>
+        <a href="index.html#education">Education</a>
+        <a href="publications.html" class="nav-active">Publications</a>
         <a href="files/Fatemeh_Bahrani_CV.pdf" target="_blank">CV</a>
       </nav>
 
       <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
-        <!-- Moon (shown in light mode) -->
         <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
         </svg>
-        <!-- Sun (shown in dark mode) -->
         <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="12" cy="12" r="5"/>
           <line x1="12" y1="1" x2="12" y2="3"/>
@@ -98,55 +98,90 @@
   <!-- ── Main content ──────────────────────────────────────── -->
   <main class="main">
 
-    <section class="about">
-      <p>
-        I am a CS Researcher, working under the supervision of professor
-        <a href="https://ebiyik.github.io/">Erdem Bıyık</a>.
-        My overarching research goal is to develop data-efficient, generalizable, and trustworthy robot learning
-        frameworks that can operate robustly in complex, sequential settings. A central theme of my research
-        vision is introducing structure into learning-based robotics. Rather than relying purely on end-to-end
-        data-driven policies, I am interested in leveraging additional sources of guidance, such as prior knowledge,
-        auxiliary modalities, and richer supervision signals, to support enhanced data curation, representation
-        learning, policy optimization, and inference-time reasoning.
+    <section id="publications">
+      <h2>Publications</h2>
+
+      <p class="scholar-note">
+        For a complete and up-to-date list, visit my
+        <a href="https://scholar.google.com/citations?user=3tdMZ68AAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a> profile.
       </p>
-    </section>
 
-    <section id="news">
-      <h2>News</h2>
-      <div class="news-scroll">
+      <h3 class="pub-year-label">2026</h3>
 
-        <div class="news-item">
-          <span class="news-date">Apr 2026</span>
-          <span>Paper accepted at <strong>ACL 2026</strong> &mdash;
-            <a href="https://arxiv.org/abs/2510.04484">Psychological Steering in LLMs: An Evaluation of Effectiveness and Trustworthiness</a></span>
+      <div class="publication-prj-item">
+        <div class="pub-text">
+          <div class="pub-title">Sampling More, Getting Less: Calibration is the Diversity Bottleneck in LLMs</div>
+          <div class="pub-authors">A. Banayeeanzade, Q. Yang, D. Tarsadiya, <b>F. Bahrani</b>, L. Blas, A. Samuel, et al.</div>
+          <div class="pub-venue">ArXiv <em>(preprint)</em></div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2605.11128">Paper</a>
+            <a href="https://diversitycalibration.github.io/">Demo</a>
+          </div>
         </div>
-
-        <div class="news-item">
-          <span class="news-date">Apr 2026</span>
-          <span>Paper accepted at <strong>ICLR 2026 - Workshop on Representational Alignment</strong> &mdash;
-            <a href="https://www.arxiv.org/abs/2601.22329">Sparks of Rationality: Do Reasoning LLMs Align with Human Judgment and Choice?</a></span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-date">Jan 2026</span>
-          <span>Paper accepted at <strong>ICRA 2026</strong> &mdash;
-            <a href="https://arxiv.org/abs/2511.18617">AutoFocus-IL: VLM-based Saliency Maps for Data-Efficient Visual Imitation Learning</a></span>
-        </div>
-
-        <div class="news-item">
-          <span class="news-date">Jun 2025</span>
-          <span>Paper accepted at <strong>IROS 2025</strong> &mdash;
-            <a href="https://arxiv.org/abs/2507.19647">GABRIL: Gaze-Based Regularization for Imitation Learning</a></span>
-        </div>
-
       </div>
-    </section>
 
-    <section id="education">
-      <h2>Education</h2>
-      <ul>
-        <li><strong>BSc Computer Engineering</strong> &mdash; Sharif University of Technology</li>
-      </ul>
+      <div class="publication-prj-item">
+        <div class="pub-img">
+          <img src="images/paper_img/sparks_of_rationality.png" alt="Sparks of Rationality figure">
+        </div>
+        <div class="pub-text">
+          <div class="pub-title">Sparks of Rationality: Do Reasoning LLMs Align with Human Judgment and Choice?</div>
+          <div class="pub-authors">A. N. Tak*, A. Banayeeanzade*, A. Bolourani*, <b>F. Bahrani</b>, A. Chaubey, SP. Karimireddy, N. Schwarz, J. Gratch.</div>
+          <div class="pub-venue">ICLR 2026 - Workshop on Representational Alignment</div>
+          <div class="pub-links">
+            <a href="https://www.arxiv.org/abs/2601.22329">Paper</a>
+            <a href="https://github.com/AlaNekTak/DLLM">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="publication-prj-item">
+        <div class="pub-img">
+          <img src="images/paper_img/psyset.png" alt="PsySet figure">
+        </div>
+        <div class="pub-text">
+          <div class="pub-title">Psychological Steering in LLMs: An Evaluation of Effectiveness and Trustworthiness</div>
+          <div class="pub-authors">A. Banayeeanzade*, A. N. Tak*, <b>F. Bahrani</b>, A. Bolourani, L. Blas, E. Ferrara, J. Gratch, SP. Karimireddy.</div>
+          <div class="pub-venue">ACL 2026</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2510.04484">Paper</a>
+            <a href="https://github.com/aminbana/PsySet">Code</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="publication-prj-item">
+        <div class="pub-img">
+          <img src="images/paper_img/autofocus.png" alt="AutoFocus-IL figure">
+        </div>
+        <div class="pub-text">
+          <div class="pub-title">AutoFocus-IL: VLM-based Saliency Maps for Data-Efficient Visual Imitation Learning without Extra Human Annotations</div>
+          <div class="pub-authors">L. Gong, <b>F. Bahrani</b>, Y. Zhou, A. Banayeeanzade, J. Li, E. Bıyık.</div>
+          <div class="pub-venue">ICRA 2026</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2511.18617">Paper</a>
+            <a href="https://autofocus-il.github.io/">Project Page</a>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="pub-year-label">2025</h3>
+
+      <div class="publication-prj-item">
+        <div class="pub-img">
+          <img src="images/paper_img/GABRIL.png" alt="GABRIL figure">
+        </div>
+        <div class="pub-text">
+          <div class="pub-title">GABRIL: Gaze-Based Regularization for Mitigating Causal Confusion in Imitation Learning</div>
+          <div class="pub-authors">A. Banayeeanzade*, <b>F. Bahrani</b>*, Y. Zhou, E. Bıyık.</div>
+          <div class="pub-venue">IROS 2025</div>
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2507.19647">Paper</a>
+            <a href="https://liralab.usc.edu/gabril/">Project Page</a>
+          </div>
+        </div>
+      </div>
+
     </section>
 
   </main>
