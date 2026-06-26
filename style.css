@@ -1,55 +1,109 @@
 /* =============================================================
-   THEME — edit only the two marked lines to restyle the site.
-   Light and dark accents are set separately; the backgrounds
-   and text colors automatically follow the warm palette.
+   THEME — swap the values in :root and [data-theme="dark"]
+   to change the whole site palette.
 
-   Light accent ideas:
-     Deep teal:      #0d6e6e / dark #085252
-     Navy:           #1b3d6f / dark #112849
-     Forest:         #2d5a27 / dark #1e3d1a
+   ── SAVED PRESETS ────────────────────────────────────────────
 
-   Dark-mode accent ideas (shown on a dark background):
-     Teal light:     #5ac8c8
-     Indigo light:   #8899dd
-     Sage light:     #7ab878
+   PURPLE (current)
+     Light: --accent:#7c4fa5;  
+     --accent-dark:#5e3880;
+            --bg:#f7f2fc;  
+            --sidebar-bg:#ede4f7;  
+            --border:#ddd0eb;
+            --text:#1a1025;  
+            --text-light:#7a6585;
+     Dark:  --accent:#c8a0e0;  
+            --accent-dark:#dab8f0;
+            --bg:#110d18;  
+            --sidebar-bg:#1a1228;  
+            --card-bg:#201530;
+            --text:#ede0f5;  
+            --text-light:#9a85a8;  
+            --border:#362548;
+     rgba fallbacks: 124,79,165;
+
+   BLUE — A · Sky  (soft, airy)
+     Light: --accent:#2878c3;  
+            --accent-dark:#1a5a9a;
+            --bg:#f0f7ff;  
+            --sidebar-bg:#e0edfb; 
+            --border:#c8dff5;
+            --text:#0d1c30;  
+            --text-light:#5a7898;
+     Dark:  --accent:#7ec8f8;  
+            --accent-dark:#a8d8ff;
+            --bg:#0a0f1a;  
+            --sidebar-bg:#101828; 
+            --card-bg:#152035;
+            --text:#d5e8f8;  
+            --text-light:#6890b0;  
+            --border:#1c3050;
+     rgba fallbacks: 40,120,195
+
+   BLUE — B · Ocean  (richer, deeper)
+     Light: --accent:#1560a8;  --accent-dark:#0e4880;
+            --bg:#f0f5fb;  --sidebar-bg:#dce9f8;  --border:#bcd5f0;
+            --text:#081828;  --text-light:#4a6e8a;
+     Dark:  --accent:#60b0e8;  --accent-dark:#88ccff;
+            --bg:#07101a;  --sidebar-bg:#0d1a2a;  --card-bg:#102038;
+            --text:#cce0f5;  --text-light:#5888a0;  --border:#183050;
+     rgba fallbacks: 21,96,168
+
+   BLUE — C · Indigo  (blue-purple, cool)
+     Light: --accent:#3a5fc8;  --accent-dark:#2a48a8;
+            --bg:#f2f4fc;  --sidebar-bg:#e5e8f8;  --border:#ccd2f0;
+            --text:#0e1428;  --text-light:#5e6888;
+     Dark:  --accent:#8098f0;  --accent-dark:#a0b4ff;
+            --bg:#0c0e1a;  --sidebar-bg:#121628;  --card-bg:#181e3a;
+            --text:#d5d8f5;  --text-light:#6878a8;  --border:#202858;
+     rgba fallbacks: 58,95,200
+
+   BLUE — D · Frost  (near-white, barely-there)
+     Light: --accent:#4a7ac0;  --accent-dark:#3060a0;
+            --bg:#f5f8fe;  --sidebar-bg:#eaf0fb;  --border:#d0dff5;
+            --text:#121e30;  --text-light:#607098;
+     Dark:  --accent:#90b8e8;  --accent-dark:#b0d0ff;
+            --bg:#0c1018;  --sidebar-bg:#141c2a;  --card-bg:#1a2438;
+            --text:#d5e2f5;  --text-light:#6585a8;  --border:#223048;
+     rgba fallbacks: 74,122,192
    ============================================================= */
-:root {
-  /* ── Light mode ──────────────────────────────────────────── */
-  --accent:      #561407;     /* ← change me            */
-  --accent-dark: #3d0d05;     /* ← change me (hover)    */
 
-  --bg:          #f0e8dc;     /* warm parchment page bg  */
-  --sidebar-bg:  #e8ddd0;     /* sidebar tint            */
-  --card-bg:     #ffffff;     /* main content            */
-  --text:        #1c1916;     /* warm near-black         */
-  --text-light:  #7a6d62;     /* muted                   */
-  --border:      #d4c5b2;     /* dividers                */
+/* ── ACTIVE THEME: PURPLE ───────────────────────────────────── */
+:root {
+  --accent:      #7c4fa5;
+  --accent-dark: #5e3880;
+
+  --bg:          #f7f2fc;
+  --sidebar-bg:  #ede4f7;
+  --card-bg:     #ffffff;
+  --text:        #1a1025;
+  --text-light:  #7a6585;
+  --border:      #ddd0eb;
 
   color-scheme: light dark;
 }
 
-/* ── Dark mode — applied by system pref or [data-theme="dark"] */
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --accent:      #d07060;
-    --accent-dark: #e58878;
-    --bg:          #100e0c;
-    --sidebar-bg:  #191511;
-    --card-bg:     #201c18;
-    --text:        #e0d8cc;
-    --text-light:  #8a7f74;
-    --border:      #332c24;
+    --accent:      #c8a0e0;
+    --accent-dark: #dab8f0;
+    --bg:          #110d18;
+    --sidebar-bg:  #1a1228;
+    --card-bg:     #201530;
+    --text:        #ede0f5;
+    --text-light:  #9a85a8;
+    --border:      #362548;
   }
 }
 [data-theme="dark"] {
-  --accent:      #d07060;
-  --accent-dark: #e58878;
-  --bg:          #100e0c;
-  --sidebar-bg:  #191511;
-  --card-bg:     #201c18;
-  --text:        #e0d8cc;
-  --text-light:  #8a7f74;
-  --border:      #332c24;
+  --accent:      #c8a0e0;
+  --accent-dark: #dab8f0;
+  --bg:          #110d18;
+  --sidebar-bg:  #1a1228;
+  --card-bg:     #201530;
+  --text:        #ede0f5;
+  --text-light:  #9a85a8;
+  --border:      #362548;
 }
 
 /* ── Reset ──────────────────────────────────────────────────── */
@@ -226,7 +280,7 @@ a:hover { color: var(--accent-dark); text-decoration: none; }
   padding-left: 16px;
 }
 .sidebar-nav a.nav-active {
-  background: rgba(86, 20, 7, 0.1);
+  background: rgba(124, 79, 165, 0.1);
   background: color-mix(in srgb, var(--accent) 12%, transparent);
   color: var(--accent);
   font-weight: 700;
@@ -359,7 +413,7 @@ a:hover { color: var(--accent-dark); text-decoration: none; }
   color: var(--text-light);
   margin: 0 0 20px;
   padding: 10px 14px;
-  background: rgba(86, 20, 7, 0.05);
+  background: rgba(124, 79, 165, 0.05);
   background: color-mix(in srgb, var(--accent) 6%, transparent);
   border-left: 3px solid var(--accent);
   border-radius: 0 5px 5px 0;
